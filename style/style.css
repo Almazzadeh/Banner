@@ -1,0 +1,457 @@
+@-webkit-keyframes contentMove {
+  from {
+    top: 0;
+  }
+  to {
+    top: -100%;
+  }
+}
+
+@keyframes contentMove {
+  from {
+    top: 0;
+  }
+  to {
+    top: -100%;
+  }
+}
+
+@-webkit-keyframes balloonMove {
+  from {
+    top: 130%;
+    -webkit-transform: translate(-50%, -50%) scale(0.8, 0.8);
+            transform: translate(-50%, -50%) scale(0.8, 0.8);
+  }
+  to {
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%) scale(1.6, 1.6);
+            transform: translate(-50%, -50%) scale(1.6, 1.6);
+  }
+}
+
+@keyframes balloonMove {
+  from {
+    top: 130%;
+    -webkit-transform: translate(-50%, -50%) scale(0.8, 0.8);
+            transform: translate(-50%, -50%) scale(0.8, 0.8);
+  }
+  to {
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%) scale(1.6, 1.6);
+            transform: translate(-50%, -50%) scale(1.6, 1.6);
+  }
+}
+
+@-webkit-keyframes balloonShake {
+  from {
+    -webkit-transform: translate(-50%, -50%) scale(1.6, 1.6) rotate(4deg);
+            transform: translate(-50%, -50%) scale(1.6, 1.6) rotate(4deg);
+  }
+  to {
+    -webkit-transform: translate(-50%, -50%) scale(1.6, 1.6) rotate(-4deg);
+            transform: translate(-50%, -50%) scale(1.6, 1.6) rotate(-4deg);
+  }
+}
+
+@keyframes balloonShake {
+  from {
+    -webkit-transform: translate(-50%, -50%) scale(1.6, 1.6) rotate(4deg);
+            transform: translate(-50%, -50%) scale(1.6, 1.6) rotate(4deg);
+  }
+  to {
+    -webkit-transform: translate(-50%, -50%) scale(1.6, 1.6) rotate(-4deg);
+            transform: translate(-50%, -50%) scale(1.6, 1.6) rotate(-4deg);
+  }
+}
+
+@-webkit-keyframes balloonHide {
+  from {
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%) scale(1.6, 1.6);
+            transform: translate(-50%, -50%) scale(1.6, 1.6);
+  }
+  to {
+    top: -40%;
+    -webkit-transform: translate(-50%, -50%) scale(0.6, 0.6);
+            transform: translate(-50%, -50%) scale(0.6, 0.6);
+  }
+}
+
+@keyframes balloonHide {
+  from {
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%) scale(1.6, 1.6);
+            transform: translate(-50%, -50%) scale(1.6, 1.6);
+  }
+  to {
+    top: -40%;
+    -webkit-transform: translate(-50%, -50%) scale(0.6, 0.6);
+            transform: translate(-50%, -50%) scale(0.6, 0.6);
+  }
+}
+
+@-webkit-keyframes cloudMove {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 110%;
+  }
+}
+
+@keyframes cloudMove {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 110%;
+  }
+}
+
+@-webkit-keyframes cloudScale {
+  0% {
+    -webkit-transform: scale(1.3, 1.3);
+            transform: scale(1.3, 1.3);
+  }
+  50% {
+    -webkit-transform: scale(2.1, 2.1);
+            transform: scale(2.1, 2.1);
+  }
+  100% {
+    -webkit-transform: scale(1.3, 1.3);
+            transform: scale(1.3, 1.3);
+  }
+}
+
+@keyframes cloudScale {
+  0% {
+    -webkit-transform: scale(1.3, 1.3);
+            transform: scale(1.3, 1.3);
+  }
+  50% {
+    -webkit-transform: scale(2.1, 2.1);
+            transform: scale(2.1, 2.1);
+  }
+  100% {
+    -webkit-transform: scale(1.3, 1.3);
+            transform: scale(1.3, 1.3);
+  }
+}
+
+@-webkit-keyframes discoverMove {
+  from {
+    top: -40%;
+  }
+  to {
+    top: 40%;
+  }
+}
+
+@keyframes discoverMove {
+  from {
+    top: -40%;
+  }
+  to {
+    top: 40%;
+  }
+}
+
+@-webkit-keyframes backObjectsMove {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 0%;
+  }
+}
+
+@keyframes backObjectsMove {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 0%;
+  }
+}
+
+@-webkit-keyframes backObjectsHide {
+  from {
+    top: 0%;
+  }
+  to {
+    top: 100%;
+  }
+}
+
+@keyframes backObjectsHide {
+  from {
+    top: 0%;
+  }
+  to {
+    top: 100%;
+  }
+}
+
+@-webkit-keyframes discoverHide {
+  from {
+    top: 40%;
+  }
+  to {
+    top: 120%;
+  }
+}
+
+@keyframes discoverHide {
+  from {
+    top: 40%;
+  }
+  to {
+    top: 120%;
+  }
+}
+
+@-webkit-keyframes contentBack {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 0%;
+  }
+}
+
+@keyframes contentBack {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 0%;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: #56b6e5;
+  overflow: hidden;
+}
+
+.circle {
+  position: absolute;
+  background: -webkit-gradient(linear, left top, left bottom, from(#72ccf2), to(rgba(86, 182, 229, 0.8)));
+  background: linear-gradient(to bottom, #72ccf2, rgba(86, 182, 229, 0.8));
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-radius: 100%;
+  width: 100%;
+  padding-top: 100%;
+}
+
+.content {
+  padding: 8rem 0;
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transform: scale(1.3, 1.3);
+          transform: scale(1.3, 1.3);
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.content.animated {
+  -webkit-animation: contentMove 1s linear 1s forwards, contentBack 1s 12s linear forwards;
+          animation: contentMove 1s linear 1s forwards, contentBack 1s 12s linear forwards;
+}
+
+.content img {
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.content img:nth-child(2) {
+  margin-top: 8rem;
+}
+
+.balloon {
+  position: absolute;
+  z-index: 5;
+  left: 50%;
+  top: 130%;
+  -webkit-transform: translate(-50%, -50%) scale(0.8, 0.8);
+          transform: translate(-50%, -50%) scale(0.8, 0.8);
+}
+
+.balloon.animated {
+  -webkit-animation: balloonMove 1s linear 1s forwards, balloonShake 1s linear 2s alternate infinite forwards, balloonHide .5s 12s ease-in forwards;
+          animation: balloonMove 1s linear 1s forwards, balloonShake 1s linear 2s alternate infinite forwards, balloonHide .5s 12s ease-in forwards;
+}
+
+.left-clouds, .right-clouds {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem 0;
+}
+
+.left-clouds.animated, .animated.right-clouds {
+  -webkit-animation: cloudMove 4s 2s linear forwards;
+          animation: cloudMove 4s 2s linear forwards;
+}
+
+.left-clouds.animated img, .animated.right-clouds img {
+  -webkit-animation: cloudScale 4s 2s linear forwards;
+          animation: cloudScale 4s 2s linear forwards;
+}
+
+.left-clouds img, .right-clouds img {
+  -webkit-transform: scale(1.3, 1.3);
+          transform: scale(1.3, 1.3);
+}
+
+.right-clouds {
+  left: auto;
+  right: 0;
+  z-index: 6;
+}
+
+.right-clouds.animated {
+  -webkit-animation-delay: 2.6s;
+          animation-delay: 2.6s;
+}
+
+.discover {
+  position: absolute;
+  z-index: 5;
+  left: 50%;
+  top: -40%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transform: translate(-50%, -50%) scale(1.5, 1.5);
+          transform: translate(-50%, -50%) scale(1.5, 1.5);
+}
+
+.discover.animated {
+  -webkit-animation: discoverMove 4s 5s linear forwards, discoverHide .5s 12s ease-in forwards;
+          animation: discoverMove 4s 5s linear forwards, discoverHide .5s 12s ease-in forwards;
+}
+
+.back-balloons, .back-clouds {
+  position: absolute;
+  top: -100%;
+  width: 100%;
+  height: 100%;
+}
+
+.back-balloons.animated, .animated.back-clouds {
+  -webkit-animation: backObjectsMove 5s 5s linear forwards, backObjectsHide .5s 12s ease-in forwards;
+          animation: backObjectsMove 5s 5s linear forwards, backObjectsHide .5s 12s ease-in forwards;
+}
+
+.back-balloons .back-balloon-green, .back-clouds .back-balloon-green {
+  position: absolute;
+  top: 36%;
+  left: 3%;
+  -webkit-transform: scale(1.3, 1.3);
+          transform: scale(1.3, 1.3);
+}
+
+.back-balloons .back-ballon-red-up, .back-clouds .back-ballon-red-up {
+  position: absolute;
+  top: 13%;
+  right: 13%;
+  -webkit-transform: scale(0.8, 0.8);
+          transform: scale(0.8, 0.8);
+}
+
+.back-balloons .back-ballon-red-down, .back-clouds .back-ballon-red-down {
+  position: absolute;
+  top: 43%;
+  right: 5%;
+  -webkit-transform: scale(1.4, 1.4);
+          transform: scale(1.4, 1.4);
+}
+
+.back-clouds {
+  border-color: blue;
+}
+
+.back-clouds.animated {
+  -webkit-animation-duration: 5.5s, .5s;
+          animation-duration: 5.5s, .5s;
+}
+
+.back-clouds div {
+  position: absolute;
+}
+
+.back-clouds .cloud-left {
+  top: 20%;
+  left: 5%;
+  -webkit-transform: scale(1.4, 1.4);
+          transform: scale(1.4, 1.4);
+}
+
+.back-clouds .cloud-middle {
+  top: 10%;
+  left: 30%;
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
+}
+
+.back-clouds .cloud-right {
+  right: 25%;
+  top: 15%;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .container {
+    width: 60%;
+    height: 90%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    width: 30%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

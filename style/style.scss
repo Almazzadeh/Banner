@@ -1,0 +1,210 @@
+@import "animations";
+// D E F A U L T S
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+    object-fit: contain;
+}
+
+// C O N T A I N E R
+.container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #56b6e5;
+    overflow: hidden;
+}
+
+// C I R C L E
+.circle{
+    position: absolute;
+    background: linear-gradient(to bottom, #72ccf2, rgba($color: #56b6e5, $alpha: .8));
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 100%;
+    width: 100%;
+    padding-top: 100%;
+}
+
+// C O N T E N T
+.content{
+    padding: 8rem 0;
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transform: scale(1.3, 1.3);
+    justify-content: space-around;
+    
+    &.animated{
+        animation: contentMove 1s linear 1s forwards,
+               contentBack 1s 12s linear forwards;
+    }
+
+    img{
+        max-width: 100%;
+        object-fit: contain;
+
+        &:nth-child(2){margin-top: 8rem;}
+    }
+}
+
+// B A L L O O N
+.balloon{
+    position: absolute;
+    z-index: 5;
+    left: 50%;
+    top: 130%;
+    transform: translate(-50%, -50%) scale(.8, .8);
+
+    &.animated{
+        animation: balloonMove 1s linear 1s forwards,
+               balloonShake 1s linear 2s alternate infinite forwards,
+               balloonHide .5s 12s ease-in forwards;
+    }
+}
+
+// L E F T   C L O U D S
+.left-clouds{
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 2rem 0;
+    
+    &.animated{
+        animation: cloudMove 4s 2s linear forwards;
+        & img{animation: cloudScale 4s 2s linear forwards;}
+    }
+
+    img{transform: scale(1.3, 1.3);}
+}
+
+// R I G H T   C L O U D S
+.right-clouds{
+    @extend .left-clouds;
+    left: auto;
+    right: 0;
+    z-index: 6;
+
+    &.animated{
+        animation-delay: 2.6s;
+    }
+}
+
+// D I S C O V  E R
+.discover{
+    position: absolute;
+    z-index: 5;
+    left: 50%;
+    top: -40%;
+    transform: translateX(-50%);
+    transform: translate(-50%, -50%) scale(1.5, 1.5);
+
+    &.animated{
+        animation: discoverMove 4s 5s linear forwards,
+               discoverHide .5s 12s ease-in forwards;
+    }
+}
+
+// B A C K   B A L L O O N S
+.back-balloons{
+    position: absolute;
+    top: -100%;
+    width: 100%;
+    height: 100%;
+
+    &.animated{
+        animation: backObjectsMove 5s 5s linear forwards,
+               backObjectsHide .5s 12s ease-in forwards;
+    }
+
+    // GREEN LEFT
+    .back-balloon-green{
+        position: absolute;
+        top: 36%;
+        left: 3%;
+        transform: scale(1.3, 1.3);
+    }
+
+    // RED RIGHT UP
+    .back-ballon-red-up{
+        position: absolute;
+        top: 13%;
+        right: 13%;
+        transform: scale(.8, .8);
+    }
+
+    // RED RIGHT DOWN
+    .back-ballon-red-down{
+        position: absolute;
+        top: 43%;
+        right: 5%;
+        transform: scale(1.4, 1.4);
+    }
+}
+
+// B A C K   C L O U D S
+.back-clouds{
+    @extend .back-balloons;
+    border-color: blue;
+
+    &.animated{animation-duration: 5.5s, .5s;}
+
+    div{
+        position: absolute;
+    }
+
+    .cloud-left{
+        top: 20%;
+        left: 5%;
+        transform: scale(1.4, 1.4)
+    }
+
+    .cloud-middle{
+        top: 10%;
+        left: 30%;
+        transform: scale(1.2, 1.2);
+    }
+
+    .cloud-right{
+        right: 25%;
+        top: 15%
+    }
+}
+
+// *****MEDIA QUERIES*****
+//ONLY SMALL DEVICES
+@media screen and (max-width: 767.9px){
+
+}
+
+// ONLY MEDIUM DEVICES
+@media screen and (min-width: 768px) and (max-width: 991.9px){
+    .container{
+        width: 60%;
+        height: 90%;
+        
+    }
+}
+
+// ONLY LARGE DEVICES
+@media screen and (min-width: 992px){
+    .container{
+        width: 30%;
+    }
+}
